@@ -13,7 +13,19 @@
 		314484492C2AB3CB00F7690A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 314484472C2AB3CB00F7690A /* Main.storyboard */; };
 		3144844B2C2AB3CD00F7690A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3144844A2C2AB3CD00F7690A /* Assets.xcassets */; };
 		3144844E2C2AB3CD00F7690A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3144844C2C2AB3CD00F7690A /* LaunchScreen.storyboard */; };
+		3144845C2C2AB3E000F7690A /* BomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3144845B2C2AB3E000F7690A /* BomeTests.swift */; };
+		314484642C2AB48D00F7690A /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 314484632C2AB48D00F7690A /* CryptoSwift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3144845D2C2AB3E000F7690A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 314484362C2AB3CB00F7690A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3144843D2C2AB3CB00F7690A;
+			remoteInfo = Bome;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3144843E2C2AB3CB00F7690A /* Bome.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bome.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -24,10 +36,20 @@
 		3144844A2C2AB3CD00F7690A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3144844D2C2AB3CD00F7690A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3144844F2C2AB3CD00F7690A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		314484592C2AB3E000F7690A /* BomeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BomeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3144845B2C2AB3E000F7690A /* BomeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BomeTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		3144843B2C2AB3CB00F7690A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				314484642C2AB48D00F7690A /* CryptoSwift in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		314484562C2AB3E000F7690A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +63,7 @@
 			isa = PBXGroup;
 			children = (
 				314484402C2AB3CB00F7690A /* Bome */,
+				3144845A2C2AB3E000F7690A /* BomeTests */,
 				3144843F2C2AB3CB00F7690A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,6 +72,7 @@
 			isa = PBXGroup;
 			children = (
 				3144843E2C2AB3CB00F7690A /* Bome.app */,
+				314484592C2AB3E000F7690A /* BomeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,6 +91,14 @@
 			path = Bome;
 			sourceTree = "<group>";
 		};
+		3144845A2C2AB3E000F7690A /* BomeTests */ = {
+			isa = PBXGroup;
+			children = (
+				3144845B2C2AB3E000F7690A /* BomeTests.swift */,
+			);
+			path = BomeTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -83,9 +115,30 @@
 			dependencies = (
 			);
 			name = Bome;
+			packageProductDependencies = (
+				314484632C2AB48D00F7690A /* CryptoSwift */,
+			);
 			productName = Bome;
 			productReference = 3144843E2C2AB3CB00F7690A /* Bome.app */;
 			productType = "com.apple.product-type.application";
+		};
+		314484582C2AB3E000F7690A /* BomeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3144845F2C2AB3E000F7690A /* Build configuration list for PBXNativeTarget "BomeTests" */;
+			buildPhases = (
+				314484552C2AB3E000F7690A /* Sources */,
+				314484562C2AB3E000F7690A /* Frameworks */,
+				314484572C2AB3E000F7690A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3144845E2C2AB3E000F7690A /* PBXTargetDependency */,
+			);
+			name = BomeTests;
+			productName = BomeTests;
+			productReference = 314484592C2AB3E000F7690A /* BomeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -100,6 +153,10 @@
 					3144843D2C2AB3CB00F7690A = {
 						CreatedOnToolsVersion = 15.2;
 					};
+					314484582C2AB3E000F7690A = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 3144843D2C2AB3CB00F7690A;
+					};
 				};
 			};
 			buildConfigurationList = 314484392C2AB3CB00F7690A /* Build configuration list for PBXProject "Bome" */;
@@ -111,11 +168,15 @@
 				Base,
 			);
 			mainGroup = 314484352C2AB3CB00F7690A;
+			packageReferences = (
+				314484622C2AB48D00F7690A /* XCRemoteSwiftPackageReference "CryptoSwift" */,
+			);
 			productRefGroup = 3144843F2C2AB3CB00F7690A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				3144843D2C2AB3CB00F7690A /* Bome */,
+				314484582C2AB3E000F7690A /* BomeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -128,6 +189,13 @@
 				3144844E2C2AB3CD00F7690A /* LaunchScreen.storyboard in Resources */,
 				3144844B2C2AB3CD00F7690A /* Assets.xcassets in Resources */,
 				314484492C2AB3CB00F7690A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		314484572C2AB3E000F7690A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,7 +212,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		314484552C2AB3E000F7690A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3144845C2C2AB3E000F7690A /* BomeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3144845E2C2AB3E000F7690A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3144843D2C2AB3CB00F7690A /* Bome */;
+			targetProxy = 3144845D2C2AB3E000F7690A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		314484472C2AB3CB00F7690A /* Main.storyboard */ = {
@@ -218,7 +302,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -275,7 +359,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -300,6 +384,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -328,6 +413,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -338,6 +424,44 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		314484602C2AB3E000F7690A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UAEM649DN3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.6x.BomeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bome.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Bome";
+			};
+			name = Debug;
+		};
+		314484612C2AB3E000F7690A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = UAEM649DN3;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.6x.BomeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bome.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Bome";
 			};
 			name = Release;
 		};
@@ -362,7 +486,35 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		3144845F2C2AB3E000F7690A /* Build configuration list for PBXNativeTarget "BomeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				314484602C2AB3E000F7690A /* Debug */,
+				314484612C2AB3E000F7690A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		314484622C2AB48D00F7690A /* XCRemoteSwiftPackageReference "CryptoSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/krzyzanowskim/CryptoSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.8.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		314484632C2AB48D00F7690A /* CryptoSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 314484622C2AB48D00F7690A /* XCRemoteSwiftPackageReference "CryptoSwift" */;
+			productName = CryptoSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 314484362C2AB3CB00F7690A /* Project object */;
 }

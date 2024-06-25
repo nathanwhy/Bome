@@ -12,8 +12,12 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        view.backgroundColor = UIColor.orange
     }
 
 
+    static func md5() -> String {
+        return "cipherkey".md5()
+    }
 }
 
